@@ -14,7 +14,8 @@ public class StudentServiceImpl implements StudentService{
 	
 	@Override
 	public List<Student> findall() {
-		
+		Student st =new Student();
+		Student stu=new Student(1, "hj", 12);
 		return rep.findAll();
 	}
 
