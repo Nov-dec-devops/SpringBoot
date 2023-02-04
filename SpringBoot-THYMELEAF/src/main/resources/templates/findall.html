@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="5px">
+
+		<tr>
+			<th>id</th>
+			<th>firstname</th>
+			<th>lastname</th>
+			<th>eroll</th>
+			<th>mail</th>
+			<th>department</th>
+			<th>findall</th>
+			<th>username</th>
+			<th>password</th>
+			<th>update</th>
+			<th>dalete</th>
+		</tr>
+
+		<tr th:each="user:${emp}">
+			<td th:text="${user.eid}"></td>
+			<td th:text="${user.firstname}"></td>
+			<td th:text="${user.lastname}"></td>
+			<td th:text="${user.eroll}"></td>
+			<td th:text="${user.mail}"></td>
+			<td th:text="${user.department}"></td>
+			<td th:text="${user.mobile}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.password}"></td>
+			<td><a th:href="@{/update/{eid}(eid=${user.eid})}">update</a></td>
+			<td><a th:href="@{/delete/{eid}(eid=${user.eid})}">delete</a></td>
+		</tr>
+
+
+	</table>
+</body>
+</html>
